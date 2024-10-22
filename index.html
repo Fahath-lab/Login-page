@@ -65,27 +65,22 @@
       <button onclick="checkCredentials()">Login</button>
       <p id="errorMessage" class="error"></p>
     </div>
-
-    <script>
-      
-        console.log("Login page script loaded"); // Add this line
+<script>
         function checkCredentials() {
-        console.log("Checking credentials"); // Add this line
-        const loginId = document.getElementById("loginId").value;
-        const password = document.getElementById("password").value;
+            const loginId = document.getElementById("loginId").value;
+            const password = document.getElementById("password").value;
 
-        const validLoginId = "KMF";
-        const validPassword = "fazil";
+            const validLoginId = "KMF";
+            const validPassword = "fahathfazil";
 
-        if (loginId === validLoginId && password === validPassword) {
-            alert("Login successful!");
-            localStorage.setItem("loggedIn", "true"); // Set login flag
-            window.location.href = "https://fahath-lab.github.io/Spiking.calculator/"; // Redirect to actual site
-        } else {
-            alert("Invalid credentials. Please try again.");
+            if (loginId === validLoginId && password === validPassword) {
+                alert("Login successful!");
+                // Redirect to the actual site with a query parameter (e.g., ?loggedIn=true)
+                window.location.href = "https://<your-username>.github.io/<your-actual-repo-name>/index.html?loggedIn=true";
+            } else {
+                alert("Invalid credentials. Please try again.");
+            }
         }
-    }
-
     </script>
   </body>
 </html>
